@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction</title>
+</head>
+<body>
+  <div>
+    <h2>📊 Prediction</h2>
+    
+
+    <!-- Form submits to the same page -->
+    <form method="POST">
+      <label>Enter Area:</label><br>
+      <input type="text" name="area" placeholder="Enter area" required><br><br>
+
+      <label>Year:</label><br>
+      <input type="number" name="year" placeholder="Enter year" required><br><br>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Display result if prediction is available -->
+    {% if predicted_price is not none %}
+      <h3>Predicted Price: ₹{{ predicted_price }}</h3>
+    {% endif %}
+  </div>
+</body>
+</html>
